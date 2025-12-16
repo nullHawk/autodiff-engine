@@ -27,7 +27,7 @@ class Value:
 
         def _backward():
             self.grad += other.data * out.grad
-            self.grad += self.data * out.grad
+            other.grad += self.data * out.grad
         out._backward = _backward
         
         return out
@@ -38,6 +38,26 @@ class Value:
 
         def _backward():
             self.grad += (other * self.data**(other-1)) * out.grad
+        out._backward = _backward
+
+        return out
+    
+    def exp(self):
+        x = self.data
+        out = Value(math.exp(x), (self, ), 'exp')
+
+        def _backward():
+            self.grad += out.data * out.grad
+        out._backward = _backward
+
+        return out
+    
+    def log(self):
+        x = self.data
+        out = Value(math.log(x), (self, ), 'log')
+
+        def _backward():
+            self.grad += (1/x) * out.grad
         out._backward = _backward
 
         return out
