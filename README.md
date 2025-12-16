@@ -15,6 +15,11 @@ Internally, `.backward()` performs a **topological sort** over this DAG so gradi
 - Batched matrix multiplication gradients via `@`
 - A notebook (`autodiff_scaler.ipynb`) that demos the concepts and includes simple performance plots
 
+## Benchmarks
+<img width="625" height="398" alt="download" src="https://github.com/user-attachments/assets/b203f3d8-ddc6-4ca0-8af2-4878c841f4cf" />
+<img width="657" height="393" alt="download" src="https://github.com/user-attachments/assets/e4698dbf-1ba2-47b9-a999-79bc8712d613" />
+
+
 ## Project layout
 
 ```
@@ -28,10 +33,10 @@ autodiff_scaler.ipynb
 
 ## Installation
 
-This project depends on **NumPy**. The notebook uses **matplotlib** for plots.
+This project depends on **NumPy**.
 
 ```bash
-python -m pip install -U numpy matplotlib
+python -m pip install -U numpy
 ```
 
 If you want to run the tests using `pytest`:
