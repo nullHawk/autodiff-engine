@@ -1,5 +1,5 @@
 
-# Reverse‑Mode Autodiff Engine (NumPy tensors)
+# Reverse‑Mode Autodiff Engine
 
 This repo implements a small **reverse‑mode automatic differentiation** engine (a.k.a. backprop) in pure Python.
 
